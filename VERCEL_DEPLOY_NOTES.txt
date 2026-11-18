@@ -1,0 +1,19 @@
+VERCEL DEPLOYMENT NOTES
+
+This project is configured as a Flask Python serverless function.
+
+Deploy:
+1. Extract this ZIP.
+2. Upload the extracted project to a NEW private GitHub repository (do not upload passwords/secrets).
+3. In Vercel, choose Add New -> Project and import that repository.
+4. Keep the project root at the repository root (the folder containing vercel.json).
+5. Add Environment Variable SECRET_KEY with a long random value (32+ random characters).
+6. Click Deploy and wait for the build to finish.
+7. Open the Vercel-provided production URL and test Setup, Login, Dashboard, and a harmless sample file scan.
+
+IMPORTANT:
+- I cannot sign in to GitHub/Vercel or publish under your account from this chat. The ZIP is prepared, not live-deployed.
+- Vercel serverless /tmp storage is temporary and may be cleared between invocations. SQLite history, users, uploads, and quarantine are NOT durable. This setup is suitable only for a temporary demo. For a real deployment, migrate SQLite to managed PostgreSQL and uploads/quarantine to persistent object storage.
+- Do not upload real or confidential email attachments to a demo deployment.
+- VirusTotal requires VIRUSTOTAL_API_KEY. ClamAV is reported as unavailable unless installed in the runtime; do not interpret a missing engine as a clean result.
+- Change any password that was previously pasted into chat. Never put account passwords in source code, GitHub, or deployment variables.
